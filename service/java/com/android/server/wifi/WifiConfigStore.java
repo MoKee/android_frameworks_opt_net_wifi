@@ -71,7 +71,7 @@ import com.android.server.wifi.hotspot2.omadm.MOManager;
 import com.android.server.wifi.hotspot2.pps.Credential;
 import com.android.server.wifi.hotspot2.pps.HomeSP;
 
-import cyanogenmod.providers.CMSettings;
+import mokee.providers.MKSettings;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -4650,7 +4650,7 @@ public class WifiConfigStore extends IpConfigStore {
     }
 
     private boolean isAutoConfigPriorities() {
-        return CMSettings.Global.getInt(mContext.getContentResolver(),
-                CMSettings.Global.WIFI_AUTO_PRIORITIES_CONFIGURATION, 1) != 0;
+        return MKSettings.Global.getInt(mContext.getContentResolver(),
+                MKSettings.Global.WIFI_AUTO_PRIORITIES_CONFIGURATION, 1) != 0;
     }
 }
